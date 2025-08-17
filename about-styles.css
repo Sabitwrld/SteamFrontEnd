@@ -1,0 +1,609 @@
+/* Steam About Page Styles */
+
+/* About Header */
+.about-header {
+    background: linear-gradient(135deg, #1b2838 0%, #2a475e 100%);
+    padding: 80px 0;
+    text-align: center;
+    color: white;
+}
+
+.about-header h1 {
+    font-size: 56px;
+    font-weight: 700;
+    color: #66c0f4;
+    margin-bottom: 20px;
+}
+
+.about-header p {
+    font-size: 22px;
+    color: #c7d5e0;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Company Overview */
+.company-overview {
+    padding: 80px 0;
+    background: #1b2838;
+}
+
+.overview-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.overview-text h2 {
+    color: #66c0f4;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+
+.overview-text h3 {
+    color: #66c0f4;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 30px 0 15px 0;
+}
+
+.overview-text p {
+    color: #c7d5e0;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.overview-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.stat-card {
+    background: #2a475e;
+    padding: 30px 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.stat-number {
+    font-size: 48px;
+    font-weight: 700;
+    color: #66c0f4;
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+.stat-label {
+    color: #c7d5e0;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Company History */
+.company-history {
+    padding: 80px 0;
+    background: #2a475e;
+}
+
+.company-history h2 {
+    text-align: center;
+    color: #66c0f4;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 60px;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #66c0f4;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.timeline-item:nth-child(odd) {
+    flex-direction: row;
+}
+
+.timeline-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.timeline-year {
+    background: #66c0f4;
+    color: #1b2838;
+    padding: 15px 25px;
+    border-radius: 25px;
+    font-size: 20px;
+    font-weight: 700;
+    position: relative;
+    z-index: 2;
+    min-width: 120px;
+    text-align: center;
+}
+
+.timeline-content {
+    background: #1b2838;
+    padding: 25px;
+    border-radius: 8px;
+    margin: 0 30px;
+    flex: 1;
+    max-width: 400px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-content h3 {
+    color: #66c0f4;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.timeline-content p {
+    color: #c7d5e0;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Core Values */
+.core-values {
+    padding: 80px 0;
+    background: #1b2838;
+}
+
+.core-values h2 {
+    text-align: center;
+    color: #66c0f4;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 60px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.value-card {
+    background: #2a475e;
+    padding: 40px 30px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.value-icon {
+    font-size: 48px;
+    color: #66c0f4;
+    margin-bottom: 25px;
+}
+
+.value-card h3 {
+    color: #c7d5e0;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.value-card p {
+    color: #8f98a0;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Technology */
+.technology {
+    padding: 80px 0;
+    background: #2a475e;
+}
+
+.technology h2 {
+    text-align: center;
+    color: #66c0f4;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 60px;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.tech-item {
+    background: #1b2838;
+    padding: 30px 25px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.tech-item:hover {
+    transform: translateY(-5px);
+}
+
+.tech-icon {
+    font-size: 40px;
+    color: #66c0f4;
+    margin-bottom: 20px;
+}
+
+.tech-item h3 {
+    color: #c7d5e0;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.tech-item p {
+    color: #8f98a0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Team */
+.team {
+    padding: 80px 0;
+    background: #1b2838;
+}
+
+.team h2 {
+    text-align: center;
+    color: #66c0f4;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 60px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.team-member {
+    background: #2a475e;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.member-photo {
+    margin-bottom: 25px;
+}
+
+.member-photo img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #66c0f4;
+}
+
+.team-member h3 {
+    color: #c7d5e0;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.member-title {
+    color: #66c0f4;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.member-bio {
+    color: #8f98a0;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Careers */
+.careers {
+    padding: 80px 0;
+    background: #2a475e;
+}
+
+.careers-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.careers-text h2 {
+    color: #66c0f4;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.careers-text p {
+    color: #c7d5e0;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.careers-features {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.career-feature {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #c7d5e0;
+    font-size: 16px;
+}
+
+.career-feature i {
+    color: #66c0f4;
+    font-size: 20px;
+    width: 25px;
+}
+
+.careers-btn {
+    background: #5c7e10;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.careers-btn:hover {
+    background: #6b8f12;
+    transform: translateY(-2px);
+}
+
+.careers-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .overview-content,
+    .careers-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .overview-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .values-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .about-header h1 {
+        font-size: 42px;
+    }
+    
+    .about-header p {
+        font-size: 18px;
+    }
+    
+    .overview-text h2,
+    .company-history h2,
+    .core-values h2,
+    .technology h2,
+    .team h2,
+    .careers-text h2 {
+        font-size: 28px;
+    }
+    
+    .timeline::before {
+        left: 30px;
+    }
+    
+    .timeline-item {
+        flex-direction: column !important;
+        align-items: flex-start;
+        margin-left: 30px;
+    }
+    
+    .timeline-year {
+        margin-bottom: 20px;
+    }
+    
+    .timeline-content {
+        margin: 0;
+        max-width: none;
+    }
+    
+    .overview-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tech-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-header h1 {
+        font-size: 32px;
+    }
+    
+    .about-header p {
+        font-size: 16px;
+    }
+    
+    .overview-text h2,
+    .company-history h2,
+    .core-values h2,
+    .technology h2,
+    .team h2,
+    .careers-text h2 {
+        font-size: 24px;
+    }
+    
+    .stat-number {
+        font-size: 36px;
+    }
+    
+    .value-card,
+    .team-member {
+        padding: 25px 20px;
+    }
+    
+    .member-photo img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* Animations */
+.stat-card,
+.value-card,
+.tech-item,
+.team-member {
+    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.stat-card:nth-child(1) { animation-delay: 0.1s; }
+.stat-card:nth-child(2) { animation-delay: 0.2s; }
+.stat-card:nth-child(3) { animation-delay: 0.3s; }
+.stat-card:nth-child(4) { animation-delay: 0.4s; }
+
+.value-card:nth-child(1) { animation-delay: 0.5s; }
+.value-card:nth-child(2) { animation-delay: 0.6s; }
+.value-card:nth-child(3) { animation-delay: 0.7s; }
+.value-card:nth-child(4) { animation-delay: 0.8s; }
+.value-card:nth-child(5) { animation-delay: 0.9s; }
+.value-card:nth-child(6) { animation-delay: 1.0s; }
+
+.tech-item:nth-child(1) { animation-delay: 1.1s; }
+.tech-item:nth-child(2) { animation-delay: 1.2s; }
+.tech-item:nth-child(3) { animation-delay: 1.3s; }
+.tech-item:nth-child(4) { animation-delay: 1.4s; }
+
+.team-member:nth-child(1) { animation-delay: 1.5s; }
+.team-member:nth-child(2) { animation-delay: 1.6s; }
+.team-member:nth-child(3) { animation-delay: 1.7s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Timeline Animations */
+.timeline-item {
+    animation: slideInLeft 0.8s ease forwards;
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+.timeline-item:nth-child(even) {
+    animation: slideInRight 0.8s ease forwards;
+    transform: translateX(50px);
+}
+
+.timeline-item:nth-child(1) { animation-delay: 0.2s; }
+.timeline-item:nth-child(2) { animation-delay: 0.4s; }
+.timeline-item:nth-child(3) { animation-delay: 0.6s; }
+.timeline-item:nth-child(4) { animation-delay: 0.8s; }
+.timeline-item:nth-child(5) { animation-delay: 1.0s; }
+.timeline-item:nth-child(6) { animation-delay: 1.2s; }
+.timeline-item:nth-child(7) { animation-delay: 1.4s; }
+
+@keyframes slideInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Hover Effects */
+.value-card:hover .value-icon {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.tech-item:hover .tech-icon {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover .member-photo img {
+    border-color: #5c7e10;
+    transition: border-color 0.3s ease;
+}

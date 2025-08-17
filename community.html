@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steam Community - Connect with Gamers</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="community-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <div class="logo">
+                    <a href="index.html">
+                        <i class="fab fa-steam"></i>
+                        <span>STEAM</span>
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">HOME</a></li>
+                    <li><a href="store.html" class="nav-link">STORE</a></li>
+                    <li><a href="community.html" class="nav-link active">COMMUNITY</a></li>
+                    <li><a href="about.html" class="nav-link">ABOUT</a></li>
+                    <li><a href="support.html" class="nav-link">SUPPORT</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for games, movies, software, hardware and more...">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="user-actions">
+                    <button class="install-steam">Install Steam</button>
+                    <button class="login-btn">login</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Community Header -->
+    <section class="community-header">
+        <div class="container">
+            <h1>Steam Community</h1>
+            <p>Connect with millions of gamers worldwide</p>
+        </div>
+    </section>
+
+    <!-- Community Navigation -->
+    <section class="community-nav">
+        <div class="container">
+            <ul class="community-menu">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#discussions">Discussions</a></li>
+                <li><a href="#workshop">Workshop</a></li>
+                <li><a href="#market">Market</a></li>
+                <li><a href="#broadcasts">Broadcasts</a></li>
+                <li><a href="#groups">Groups</a></li>
+                <li><a href="#guides">Guides</a></li>
+                <li><a href="#screenshots">Screenshots</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Community Content -->
+    <section class="community-content">
+        <div class="container">
+            <div class="community-layout">
+                <!-- Main Content -->
+                <main class="community-main">
+                    <!-- Friends Online -->
+                    <div class="friends-online">
+                        <h2>Friends Online</h2>
+                        <div class="friends-grid" id="friends-grid">
+                            <!-- Friends will be loaded here -->
+                        </div>
+                    </div>
+                    <!-- Featured Discussions -->
+                    <div class="featured-discussions">
+                        <h2>Featured Discussions</h2>
+                        <div class="discussion-list">
+                            <div class="discussion-item">
+                                <div class="discussion-avatar">
+                                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=50&h=50&fit=crop&crop=face" alt="User Avatar">
+                                </div>
+                                <div class="discussion-content">
+                                    <h3>Best RPG Games of 2024</h3>
+                                    <p>What are your favorite RPG games released this year? Share your thoughts and recommendations!</p>
+                                    <div class="discussion-meta">
+                                        <span class="author">by GamingMaster</span>
+                                        <span class="replies">24 replies</span>
+                                        <span class="views">1.2k views</span>
+                                        <span class="time">2 hours ago</span>
+                                    </div>
+                                </div>
+                                <div class="discussion-stats">
+                                    <div class="upvotes">+45</div>
+                                </div>
+                            </div>
+
+                            <div class="discussion-item">
+                                <div class="discussion-avatar">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&h=50&fit=crop&crop=face" alt="User Avatar">
+                                </div>
+                                <div class="discussion-content">
+                                    <h3>Steam Summer Sale Predictions</h3>
+                                    <p>What games are you hoping to see on sale this summer? Let's discuss our wishlists!</p>
+                                    <div class="discussion-meta">
+                                        <span class="author">by SaleHunter</span>
+                                        <span class="replies">156 replies</span>
+                                        <span class="views">5.8k views</span>
+                                        <span class="time">1 day ago</span>
+                                    </div>
+                                </div>
+                                <div class="discussion-stats">
+                                    <div class="upvotes">+89</div>
+                                </div>
+                            </div>
+
+                            <div class="discussion-item">
+                                <div class="discussion-avatar">
+                                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=50&h=50&fit=crop&crop=face" alt="User Avatar">
+                                </div>
+                                <div class="discussion-content">
+                                    <h3>Indie Game Recommendations</h3>
+                                    <p>Looking for hidden gems? Share your favorite indie games that deserve more attention!</p>
+                                    <div class="discussion-meta">
+                                        <span class="author">by IndieLover</span>
+                                        <span class="replies">67 replies</span>
+                                        <span class="views">2.1k views</span>
+                                        <span class="time">3 days ago</span>
+                                    </div>
+                                </div>
+                                <div class="discussion-stats">
+                                    <div class="upvotes">+123</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Community Highlights -->
+                    <div class="community-highlights">
+                        <h2>Community Highlights</h2>
+                        <div class="highlights-grid">
+                            <div class="highlight-card">
+                                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=300&h=200&fit=crop&crop=center" alt="Workshop Item">
+                                <div class="highlight-content">
+                                    <h3>Amazing Skyrim Mod</h3>
+                                    <p>Check out this incredible graphics enhancement mod!</p>
+                                    <div class="highlight-stats">
+                                        <span><i class="fas fa-download"></i> 15.2k</span>
+                                        <span><i class="fas fa-heart"></i> 8.9k</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="highlight-card">
+                                <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=300&h=200&fit=crop&crop=center" alt="Screenshot">
+                                <div class="highlight-content">
+                                    <h3>Stunning Cyberpunk Screenshot</h3>
+                                    <p>Beautiful night city view captured in-game!</p>
+                                    <div class="highlight-stats">
+                                        <span><i class="fas fa-eye"></i> 12.7k</span>
+                                        <span><i class="fas fa-heart"></i> 6.3k</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="highlight-card">
+                                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=300&h=200&fit=crop&crop=center" alt="Guide">
+                                <div class="highlight-content">
+                                    <h3>Complete Elden Ring Guide</h3>
+                                    <p>Comprehensive walkthrough for new players!</p>
+                                    <div class="highlight-stats">
+                                        <span><i class="fas fa-book"></i> 45.1k</span>
+                                        <span><i class="fas fa-thumbs-up"></i> 23.8k</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Trending Groups -->
+                    <div class="trending-groups">
+                        <h2>Trending Groups</h2>
+                        <div class="groups-grid">
+                            <div class="group-card">
+                                <div class="group-header">
+                                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=80&h=80&fit=crop&crop=center" alt="Group Avatar">
+                                    <div class="group-info">
+                                        <h3>PC Gaming Enthusiasts</h3>
+                                        <p>1.2M members</p>
+                                    </div>
+                                </div>
+                                <p>Join the largest PC gaming community on Steam!</p>
+                                <button class="join-group">Join Group</button>
+                            </div>
+
+                            <div class="group-card">
+                                <div class="group-header">
+                                    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=80&h=80&fit=crop&crop=center" alt="Group Avatar">
+                                    <div class="group-info">
+                                        <h3>Indie Game Developers</h3>
+                                        <p>45.2K members</p>
+                                    </div>
+                                </div>
+                                <p>Connect with fellow indie developers and share your projects!</p>
+                                <button class="join-group">Join Group</button>
+                            </div>
+
+                            <div class="group-card">
+                                <div class="group-header">
+                                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=80&h=80&fit=crop&crop=center" alt="Group Avatar">
+                                    <div class="group-info">
+                                        <h3>Steam Trading Community</h3>
+                                        <p>89.7K members</p>
+                                    </div>
+                                </div>
+                                <p>Trade items, cards, and collectibles with other Steam users!</p>
+                                <button class="join-group">Join Group</button>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+
+                <!-- Sidebar -->
+                <aside class="community-sidebar">
+                    <!-- Quick Actions -->
+                    <div class="quick-actions">
+                        <h3>Quick Actions</h3>
+                        <button class="action-btn"><i class="fas fa-plus"></i> New Discussion</button>
+                        <button class="action-btn"><i class="fas fa-upload"></i> Upload Screenshot</button>
+                        <button class="action-btn"><i class="fas fa-users"></i> Create Group</button>
+                        <button class="action-btn"><i class="fas fa-broadcast-tower"></i> Start Broadcast</button>
+                    </div>
+
+                    <!-- Community Stats -->
+                    <div class="community-stats">
+                        <h3>Community Stats</h3>
+                        <div class="stat-item">
+                            <span class="stat-label">Active Users</span>
+                            <span class="stat-value">2.4M</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Discussions</span>
+                            <span class="stat-value">156.7K</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Groups</span>
+                            <span class="stat-value">89.3K</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Workshop Items</span>
+                            <span class="stat-value">2.1M</span>
+                        </div>
+                    </div>
+
+                    <!-- Recent Activity -->
+                    <div class="recent-activity">
+                        <h3>Recent Activity</h3>
+                        <div class="activity-item">
+                            <span class="activity-icon"><i class="fas fa-comment"></i></span>
+                            <span class="activity-text">New discussion in PC Gaming</span>
+                            <span class="activity-time">5m ago</span>
+                        </div>
+                        <div class="activity-item">
+                            <span class="activity-icon"><i class="fas fa-image"></i></span>
+                            <span class="activity-text">Screenshot uploaded to Cyberpunk</span>
+                            <span class="activity-time">12m ago</span>
+                        </div>
+                        <div class="activity-item">
+                            <span class="activity-icon"><i class="fas fa-users"></i></span>
+                            <span class="activity-text">New member joined Indie Devs</span>
+                            <span class="activity-time">18m ago</span>
+                        </div>
+                        <div class="activity-item">
+                            <span class="activity-icon"><i class="fas fa-download"></i></span>
+                            <span class="activity-text">Mod downloaded 1.2k times</span>
+                            <span class="activity-time">25m ago</span>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About Valve</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Steamworks</a></li>
+                        <li><a href="#">Steam Distribution</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Refunds</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Community Guidelines</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Preferences</a></li>
+                        <li><a href="#">Legal</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Valve Corporation. All rights reserved. All trademarks are property of their respective owners in the US and other countries.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="community.js"></script>
+</body>
+</html>
