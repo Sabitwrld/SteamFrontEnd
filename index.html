@@ -20,7 +20,7 @@
                     </a>
                 </div>
                 <ul class="nav-menu">
-                    <li><a href="store.html" class="nav-link">STORE</a></li>
+                    <li><a href="index.html" class="nav-link active">HOME</a></li>
                     <li><a href="community.html" class="nav-link">COMMUNITY</a></li>
                     <li><a href="about.html" class="nav-link">ABOUT</a></li>
                     <li><a href="support.html" class="nav-link">SUPPORT</a></li>
@@ -32,129 +32,120 @@
                     <button class="search-btn"><i class="fas fa-search"></i></button>
                 </div>
                 <div class="user-actions">
+                    <button class="wishlist-btn" id="wishlist-btn">
+                        <i class="fas fa-heart"></i>
+                        <span class="wishlist-count">0</span>
+                    </button>
+                    <button class="cart-btn" id="cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </button>
                     <button class="install-steam">Install Steam</button>
-                    <button class="login-btn">login</button>
+                    <div id="user-actions">
+                        <a href="login.html">Login</a> |
+                        <a href="register.html">Register</a>
+                    </div>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Welcome to Steam</h1>
-            <p>The ultimate destination for playing, discussing, and creating games.</p>
-            <div class="hero-buttons">
-                <button class="cta-primary">Get Steam for Free</button>
-                <button class="cta-secondary">Browse Games</button>
-            </div>
-        </div>
-        <div class="hero-image">
-            <div class="game-showcase">
-                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=300&fit=crop&crop=center" alt="Featured Game">
-                <div class="game-overlay">
-                    <h3>Cyberpunk 2077</h3>
-                    <p>Open-world action-adventure story</p>
-                    <span class="price">$59.99</span>
+    <!-- Store Header with Featured Banner -->
+    <section class="store-header">
+        <div class="container">
+            <div class="featured-banner">
+                <div class="banner-content">
+                    <h1>Welcome to Steam</h1>
+                    <p>Discover, buy, and play the latest games</p>
+                    <div class="banner-actions">
+                        <button class="banner-btn primary">Explore Games</button>
+                        <button class="banner-btn secondary">View Specials</button>
+                    </div>
+                </div>
+                <div class="banner-image">
+                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=600&h=300&fit=crop&crop=center" alt="Featured Games">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Featured Games -->
-    <section class="featured-games">
+    <!-- Special Offers Section -->
+    <section class="special-offers">
         <div class="container">
-            <h2>Featured & Recommended</h2>
-            <div class="games-grid">
-                <div class="game-card">
-                    <div class="game-image">
-                        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=300&h=200&fit=crop&crop=center" alt="Game 1">
-                        <div class="game-badge">-20%</div>
-                    </div>
-                    <div class="game-info">
-                        <h3>Elden Ring</h3>
-                        <p>Action RPG</p>
-                        <div class="game-price">
-                            <span class="original-price">$59.99</span>
-                            <span class="current-price">$47.99</span>
+            <h2 class="section-title">Special Offers</h2>
+            <div class="offers-grid">
+                <div class="offer-card featured">
+                    <div class="offer-badge">-75%</div>
+                    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=400&h=200&fit=crop&crop=center" alt="Special Offer">
+                    <div class="offer-content">
+                        <h3>Daily Deal</h3>
+                        <p>Red Dead Redemption 2</p>
+                        <div class="offer-price">
+                            <span class="original">$59.99</span>
+                            <span class="discounted">$14.99</span>
                         </div>
+                        <button class="offer-btn">Add to Cart</button>
                     </div>
                 </div>
-                <a href="game-detail.html" class="game-card">
-                    <div class="game-image">
-                        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=300&h=200&fit=crop&crop=center" alt="Game 2">
-                        <div class="game-badge">-15%</div>
-                    </div>
-                    <div class="game-info">
-                        <h3>God of War</h3>
-                        <p>Action Adventure</p>
-                        <div class="game-price">
-                            <span class="original-price">$49.99</span>
-                            <span class="current-price">$42.49</span>
+                <div class="offer-card">
+                    <div class="offer-badge">-60%</div>
+                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=200&fit=crop&crop=center" alt="Special Offer">
+                    <div class="offer-content">
+                        <h3>Weekend Deal</h3>
+                        <p>Cyberpunk 2077</p>
+                        <div class="offer-price">
+                            <span class="original">$59.99</span>
+                            <span class="discounted">$23.99</span>
                         </div>
-                    </div>
-                </a>
-                <div class="game-card">
-                    <div class="game-image">
-                        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=300&h=200&fit=crop&crop=center" alt="Game 3">
-                        <div class="game-badge">-30%</div>
-                    </div>
-                    <div class="game-info">
-                        <h3>Red Dead Redemption 2</h3>
-                        <p>Western Action</p>
-                        <div class="game-price">
-                            <span class="original-price">$59.99</span>
-                            <span class="current-price">$41.99</span>
-                        </div>
+                        <button class="offer-btn">Add to Cart</button>
                     </div>
                 </div>
-                <div class="game-card">
-                    <div class="game-image">
-                        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=300&h=200&fit=crop&crop=center" alt="Game 4">
-                        <div class="game-badge">-25%</div>
-                    </div>
-                    <div class="game-info">
-                        <h3>Death Stranding</h3>
-                        <p>Action Game</p>
-                        <div class="game-price">
-                            <span class="original-price">$59.99</span>
-                            <span class="current-price">$44.99</span>
+                <div class="offer-card">
+                    <div class="offer-badge">-50%</div>
+                    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=400&h=200&fit=crop&crop=center" alt="Special Offer">
+                    <div class="offer-content">
+                        <h3>Flash Sale</h3>
+                        <p>The Witcher 3</p>
+                        <div class="offer-price">
+                            <span class="original">$39.99</span>
+                            <span class="discounted">$19.99</span>
                         </div>
+                        <button class="offer-btn">Add to Cart</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Categories -->
-    <section class="categories">
+    <!-- Categories Section -->
+    <section class="categories-section">
         <div class="container">
-            <h2>Browse Categories</h2>
-            <div class="category-grid">
+            <h2 class="section-title">Browse by Category</h2>
+            <div class="categories-grid">
                 <div class="category-card">
                     <i class="fas fa-gamepad"></i>
                     <h3>Action</h3>
-                    <p>Fast-paced gameplay</p>
+                    <p>Fast-paced games</p>
                 </div>
                 <div class="category-card">
                     <i class="fas fa-dragon"></i>
                     <h3>RPG</h3>
-                    <p>Role-playing adventures</p>
+                    <p>Role-playing games</p>
                 </div>
                 <div class="category-card">
-                    <i class="fas fa-ghost"></i>
-                    <h3>Horror</h3>
-                    <p>Spine-chilling experiences</p>
+                    <i class="fas fa-chess"></i>
+                    <h3>Strategy</h3>
+                    <p>Tactical gameplay</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-compass"></i>
+                    <h3>Adventure</h3>
+                    <p>Exploration games</p>
                 </div>
                 <div class="category-card">
                     <i class="fas fa-car"></i>
                     <h3>Racing</h3>
-                    <p>High-speed competition</p>
-                </div>
-                <div class="category-card">
-                    <i class="fas fa-puzzle-piece"></i>
-                    <h3>Puzzle</h3>
-                    <p>Brain-teasing challenges</p>
+                    <p>Speed and competition</p>
                 </div>
                 <div class="category-card">
                     <i class="fas fa-users"></i>
@@ -165,30 +156,213 @@
         </div>
     </section>
 
-    <!-- Special Offers -->
-    <section class="special-offers">
+    <!-- New & Trending Section -->
+    <section class="trending-section">
         <div class="container">
-            <h2>Special Offers</h2>
-            <div class="offers-banner">
-                <div class="offer-content">
-                    <h3>Summer Sale 2024</h3>
-                    <p>Up to 90% off on thousands of games</p>
-                    <button class="offer-btn">Shop Now</button>
-                </div>
-                <div class="offer-timer">
-                    <div class="timer-item">
-                        <span class="number">02</span>
-                        <span class="label">Days</span>
-                    </div>
-                    <div class="timer-item">
-                        <span class="number">18</span>
-                        <span class="label">Hours</span>
-                    </div>
-                    <div class="timer-item">
-                        <span class="number">45</span>
-                        <span class="label">Minutes</span>
+            <h2 class="section-title">New & Trending</h2>
+            <div class="trending-grid">
+                <div class="trending-card featured">
+                    <div class="trending-badge">New Release</div>
+                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=500&h=300&fit=crop&crop=center" alt="Trending Game">
+                    <div class="trending-content">
+                        <h3>Elden Ring: Shadow of the Erdtree</h3>
+                        <p>Experience the epic expansion to the award-winning action RPG</p>
+                        <div class="trending-meta">
+                            <span class="trending-genre">Action RPG</span>
+                            <span class="trending-rating">★★★★★</span>
+                        </div>
+                        <div class="trending-price">
+                            <span class="price">$39.99</span>
+                            <button class="trending-btn">Add to Cart</button>
+                        </div>
                     </div>
                 </div>
+                <div class="trending-sidebar">
+                    <div class="trending-item">
+                        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=200&h=120&fit=crop&crop=center" alt="Trending Game">
+                        <div class="trending-item-content">
+                            <h4>Cyberpunk 2077: Phantom Liberty</h4>
+                            <p>New expansion available now</p>
+                            <span class="trending-price">$29.99</span>
+                        </div>
+                    </div>
+                    <div class="trending-item">
+                        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=200&h=120&fit=crop&crop=center" alt="Trending Game">
+                        <div class="trending-item-content">
+                            <h4>Red Dead Redemption 2</h4>
+                            <p>Western adventure masterpiece</p>
+                            <span class="trending-price">$14.99</span>
+                        </div>
+                    </div>
+                    <div class="trending-item">
+                        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=200&h=120&fit=crop&crop=center" alt="Trending Game">
+                        <div class="trending-item-content">
+                            <h4>The Witcher 3: Wild Hunt</h4>
+                            <p>Complete edition with DLC</p>
+                            <span class="trending-price">$19.99</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Store Content -->
+    <section class="store-content">
+        <div class="container">
+            <!-- Top Sellers Section -->
+            <div class="top-sellers-section">
+                <h2 class="section-title">Top Sellers</h2>
+                <div class="top-sellers-grid">
+                    <div class="top-seller-card">
+                        <div class="seller-rank">#1</div>
+                        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=300&h=200&fit=crop&crop=center" alt="Top Seller">
+                        <div class="seller-info">
+                            <h3>Elden Ring</h3>
+                            <p>Action RPG</p>
+                            <div class="seller-price">
+                                <span class="original">$59.99</span>
+                                <span class="current">$47.99</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-seller-card">
+                        <div class="seller-rank">#2</div>
+                        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=300&h=200&fit=crop&crop=center" alt="Top Seller">
+                        <div class="seller-info">
+                            <h3>God of War</h3>
+                            <p>Action Adventure</p>
+                            <div class="seller-price">
+                                <span class="original">$49.99</span>
+                                <span class="current">$42.49</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-seller-card">
+                        <div class="seller-rank">#3</div>
+                        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=300&h=200&fit=crop&crop=center" alt="Top Seller">
+                        <div class="seller-info">
+                            <h3>Red Dead Redemption 2</h3>
+                            <p>Western Action</p>
+                            <div class="seller-price">
+                                <span class="original">$59.99</span>
+                                <span class="current">$41.99</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="store-layout">
+                <!-- Sidebar Filters -->
+                <aside class="store-sidebar">
+                    <div class="filter-section">
+                        <h3>Categories</h3>
+                        <div class="filter-options">
+                            <label><input type="checkbox" value="action"> Action</label>
+                            <label><input type="checkbox" value="rpg"> RPG</label>
+                            <label><input type="checkbox" value="strategy"> Strategy</label>
+                            <label><input type="checkbox" value="adventure"> Adventure</label>
+                            <label><input type="checkbox" value="simulation"> Simulation</label>
+                            <label><input type="checkbox" value="sports"> Sports</label>
+                            <label><input type="checkbox" value="racing"> Racing</label>
+                            <label><input type="checkbox" value="indie"> Indie</label>
+                            <label><input type="checkbox" value="casual"> Casual</label>
+                            <label><input type="checkbox" value="horror"> Horror</label>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <h3>Price Range</h3>
+                        <div class="price-slider">
+                            <input type="range" id="price-range" min="0" max="100" value="60">
+                            <div class="price-labels">
+                                <span>$0</span>
+                                <span id="price-value">$60</span>
+                                <span>$100</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <h3>Features</h3>
+                        <div class="filter-options">
+                            <label><input type="checkbox" value="multiplayer"> Multiplayer</label>
+                            <label><input type="checkbox" value="controller"> Controller Support</label>
+                            <label><input type="checkbox" value="achievements"> Achievements</label>
+                            <label><input type="checkbox" value="cloud"> Cloud Saves</label>
+                            <label><input type="checkbox" value="trading"> Trading Cards</label>
+                            <label><input type="checkbox" value="vr"> VR Support</label>
+                            <label><input type="checkbox" value="mods"> Workshop Support</label>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <h3>Release Date</h3>
+                        <div class="filter-options">
+                            <label><input type="radio" name="release" value="all"> All Time</label>
+                            <label><input type="radio" name="release" value="2024"> 2024</label>
+                            <label><input type="radio" name="release" value="2023"> 2023</label>
+                            <label><input type="radio" name="release" value="2022"> 2022</label>
+                            <label><input type="radio" name="release" value="2021"> 2021</label>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <h3>User Reviews</h3>
+                        <div class="filter-options">
+                            <label><input type="radio" name="reviews" value="all"> All Reviews</label>
+                            <label><input type="radio" name="reviews" value="positive"> Positive</label>
+                            <label><input type="radio" name="reviews" value="very-positive"> Very Positive</label>
+                            <label><input type="radio" name="reviews" value="overwhelming"> Overwhelmingly Positive</label>
+                        </div>
+                    </div>
+
+                    <button class="apply-filters">Apply Filters</button>
+                    <button class="clear-filters">Clear All</button>
+                </aside>
+
+                <!-- Main Store Content -->
+                <main class="store-main">
+                    <!-- Sort Options -->
+                    <div class="store-toolbar">
+                        <div class="sort-options">
+                            <select id="sort-select">
+                                <option value="relevance">Relevance</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="newest">Newest</option>
+                                <option value="rating">User Rating</option>
+                                <option value="name">Name</option>
+                                <option value="release-date">Release Date</option>
+                            </select>
+                        </div>
+                        <div class="view-options">
+                            <button class="view-btn active" data-view="grid"><i class="fas fa-th"></i></button>
+                            <button class="view-btn" data-view="list"><i class="fas fa-list"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Game Grid -->
+                    <div class="games-container" id="games-container">
+                        <!-- Games will be dynamically loaded here -->
+                    </div>
+                    
+                    <!-- Recently Viewed -->
+                    <div id="recently-viewed" class="recently-viewed-section">
+                        <!-- Recently viewed games will be loaded here -->
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="pagination">
+                        <button class="page-btn" data-page="1">1</button>
+                        <button class="page-btn" data-page="2">2</button>
+                        <button class="page-btn" data-page="3">3</button>
+                        <button class="page-btn" data-page="4">4</button>
+                        <button class="page-btn" data-page="5">5</button>
+                        <button class="page-btn next">Next <i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </main>
             </div>
         </div>
     </section>
