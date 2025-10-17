@@ -1,0 +1,75 @@
+/* Library Page Styles */
+
+.library {
+    padding: 40px 0;
+    background: #1b2838;
+}
+
+.library-layout {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 30px;
+}
+
+.library-sidebar {
+    background: #2a475e;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.library-sidebar h3 {
+    color: #66c0f4;
+    margin-bottom: 15px;
+}
+
+.library-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.library-list li {
+    background: #1b2838;
+    border: 1px solid #316282;
+    border-radius: 6px;
+    padding: 12px;
+    color: #c7d5e0;
+    cursor: pointer;
+}
+
+.library-list li.active {
+    border-color: #66c0f4;
+}
+
+.library-main {
+    background: #2a475e;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.library-detail img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.playtime {
+    color: #8f98a0;
+    margin-top: 10px;
+}
+
+.play-btn {
+    background: #5c7e10;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+    .library-layout { grid-template-columns: 1fr; }
+}

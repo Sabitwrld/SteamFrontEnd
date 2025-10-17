@@ -518,11 +518,7 @@ function initGlobalAuth() {
     const loginBtns = document.querySelectorAll('.login-btn');
     loginBtns.forEach(btn => {
         btn.addEventListener('click', function() {
-            if (isAuthenticated()) {
-                logout();
-            } else {
-                showAuthModal('signin');
-            }
+            showAuthModal('signin');
         });
     });
     
@@ -531,7 +527,7 @@ function initGlobalAuth() {
 }
 
 function isAuthenticated() {
-    return localStorage.getItem('steamUser') !== null;
+    return localStorage.getItem('authToken') !== null;
 }
 
 function showAuthModal(mode) {
@@ -660,29 +656,40 @@ function handleAuthSubmit(e) {
         return;
     }
     
-    if (title === 'Sign In') {
-        // Simulate sign in
-        if (email && password) {
-            const user = { email, name: email.split('@')[0] };
-            localStorage.setItem('steamUser', JSON.stringify(user));
-            hideAuthModal();
-            updateAllAuthButtons();
-            showNotification('Successfully signed in!', 'success');
+    const endpoint = title === 'Sign In' ? '/api/auth/login' : '/api/auth/register';
+    const payload = { email, password };
+    fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+    }).then(async (res) => {
+        if (!res.ok) {
+            const msg = await res.text();
+            throw new Error(msg || 'Authentication failed');
         }
-    } else {
-        // Simulate sign up
-        if (email && password) {
-            const user = { email, name: email.split('@')[0] };
-            localStorage.setItem('steamUser', JSON.stringify(user));
-            hideAuthModal();
-            updateAllAuthButtons();
-            showNotification('Account created successfully!', 'success');
+        return res.json();
+    }).then(data => {
+        // Expecting shape: { token: string, user: { name, email, ... } }
+        if (data.token) {
+            localStorage.setItem('authToken', data.token);
         }
-    }
+        if (data.user) {
+            localStorage.setItem('steamUser', JSON.stringify(data.user));
+        } else {
+            // Fallback user
+            localStorage.setItem('steamUser', JSON.stringify({ email, name: email.split('@')[0] }));
+        }
+        hideAuthModal();
+        updateAllAuthButtons();
+        showNotification(title === 'Sign In' ? 'Successfully signed in!' : 'Account created successfully!', 'success');
+    }).catch(err => {
+        showNotification(err.message || 'Authentication failed', 'error');
+    });
 }
 
 function logout() {
     localStorage.removeItem('steamUser');
+    localStorage.removeItem('authToken');
     updateAllAuthButtons();
     showNotification('Successfully signed out!', 'success');
 }
@@ -692,7 +699,7 @@ function updateAllAuthButtons() {
     loginBtns.forEach(btn => {
         if (isAuthenticated()) {
             const user = JSON.parse(localStorage.getItem('steamUser'));
-            btn.textContent = user.name;
+            btn.textContent = user && user.name ? user.name : 'Account';
             btn.style.background = '#5c7e10';
         } else {
             btn.textContent = 'login';
@@ -705,9 +712,9 @@ function performGlobalSearch(query) {
     // Store the search query in sessionStorage for cross-page search
     sessionStorage.setItem('steamSearchQuery', query);
     
-    // If we're not on the store page, redirect to store with search
-    if (!window.location.pathname.includes('store.html')) {
-        window.location.href = `store.html?search=${encodeURIComponent(query)}`;
+    // Redirect to main index with search (merged store)
+    if (!window.location.pathname.includes('index.html')) {
+        window.location.href = `index.html?search=${encodeURIComponent(query)}`;
     } else {
         // If we're already on store page, trigger search
         if (typeof performStoreSearch === 'function') {

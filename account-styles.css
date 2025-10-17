@@ -1,0 +1,45 @@
+/* Account Page Styles */
+
+.account { padding: 40px 0; background: #1b2838; }
+
+.tabs { display: flex; gap: 10px; margin-bottom: 20px; }
+
+.tab-btn {
+    background: #2a475e;
+    color: #c7d5e0;
+    border: 1px solid #316282;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.tab-btn.active, .tab-btn:hover {
+    background: #66c0f4;
+    color: #1b2838;
+    border-color: #66c0f4;
+}
+
+.tab-content { background: #2a475e; border-radius: 8px; padding: 20px; }
+
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+.order-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 0;
+    border-bottom: 1px solid #316282;
+}
+
+.order-item:last-child { border-bottom: none; }
+
+.order-item img { width: 80px; height: 50px; object-fit: cover; border-radius: 4px; }
+
+.order-info h4 { margin: 0; color: #c7d5e0; }
+.order-info span { color: #8f98a0; font-size: 12px; }
+
+.voucher-form { display: flex; gap: 10px; align-items: center; }
+.voucher-form input { flex: 1; padding: 10px; border-radius: 6px; border: 1px solid #316282; background: #1b2838; color: #c7d5e0; }
+.redeem-btn { padding: 10px 16px; border: none; background: #5c7e10; color: white; border-radius: 6px; font-weight: 600; }

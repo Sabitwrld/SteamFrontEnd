@@ -20,8 +20,8 @@
                     </a>
                 </div>
                 <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link active">HOME</a></li>
-                    <li><a href="community.html" class="nav-link">COMMUNITY</a></li>
+                    <li><a href="index.html" class="nav-link">HOME</a></li>
+                    <li><a href="index.html" class="nav-link active">STORE</a></li>
                     <li><a href="about.html" class="nav-link">ABOUT</a></li>
                     <li><a href="support.html" class="nav-link">SUPPORT</a></li>
                 </ul>
@@ -41,10 +41,7 @@
                         <span class="cart-count">0</span>
                     </button>
                     <button class="install-steam">Install Steam</button>
-                    <div id="user-actions">
-                        <a href="login.html">Login</a> |
-                        <a href="register.html">Register</a>
-                    </div>
+                    <button class="login-btn">login</button>
                 </div>
             </div>
         </div>
@@ -257,7 +254,7 @@
                 <!-- Sidebar Filters -->
                 <aside class="store-sidebar">
                     <div class="filter-section">
-                        <h3>Categories</h3>
+                        <h3>Genres</h3>
                         <div class="filter-options">
                             <label><input type="checkbox" value="action"> Action</label>
                             <label><input type="checkbox" value="rpg"> RPG</label>
@@ -269,6 +266,22 @@
                             <label><input type="checkbox" value="indie"> Indie</label>
                             <label><input type="checkbox" value="casual"> Casual</label>
                             <label><input type="checkbox" value="horror"> Horror</label>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <h3>Tags</h3>
+                        <div class="filter-options">
+                            <label><input type="checkbox" value="open-world"> Open World</label>
+                            <label><input type="checkbox" value="co-op"> Co-op</label>
+                            <label><input type="checkbox" value="singleplayer"> Singleplayer</label>
+                            <label><input type="checkbox" value="pvp"> PvP</label>
+                            <label><input type="checkbox" value="story-rich"> Story Rich</label>
+                            <label><input type="checkbox" value="roguelike"> Roguelike</label>
+                            <label><input type="checkbox" value="souls-like"> Souls-like</label>
+                            <label><input type="checkbox" value="shooter"> Shooter</label>
+                            <label><input type="checkbox" value="puzzle"> Puzzle</label>
+                            <label><input type="checkbox" value="platformer"> Platformer</label>
                         </div>
                     </div>
 
@@ -297,16 +310,7 @@
                         </div>
                     </div>
 
-                    <div class="filter-section">
-                        <h3>Release Date</h3>
-                        <div class="filter-options">
-                            <label><input type="radio" name="release" value="all"> All Time</label>
-                            <label><input type="radio" name="release" value="2024"> 2024</label>
-                            <label><input type="radio" name="release" value="2023"> 2023</label>
-                            <label><input type="radio" name="release" value="2022"> 2022</label>
-                            <label><input type="radio" name="release" value="2021"> 2021</label>
-                        </div>
-                    </div>
+                    
 
                     <div class="filter-section">
                         <h3>User Reviews</h3>
@@ -329,12 +333,9 @@
                         <div class="sort-options">
                             <select id="sort-select">
                                 <option value="relevance">Relevance</option>
-                                <option value="price-low">Price: Low to High</option>
-                                <option value="price-high">Price: High to Low</option>
+                                <option value="price">Price</option>
                                 <option value="newest">Newest</option>
                                 <option value="rating">User Rating</option>
-                                <option value="name">Name</option>
-                                <option value="release-date">Release Date</option>
                             </select>
                         </div>
                         <div class="view-options">
@@ -415,5 +416,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="main-store.js"></script>
 </body>
 </html>
